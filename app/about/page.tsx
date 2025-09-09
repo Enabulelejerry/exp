@@ -1,3 +1,5 @@
+"use client";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import {
@@ -106,18 +108,40 @@ export default function AboutUsPage() {
         </p> */}
       </section>
 
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 md:mb-24 items-center bg-muted p-8 rounded-lg shadow-inner">
+      <section
+        className="mission-vision grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 md:mb-24 items-center bg-muted p-8 rounded-lg shadow-inner"
+        data-aos-anchor-placement="top-bottom"
+      >
         <div className="space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary">
+          <h2
+            className="text-3xl md:text-4xl font-bold text-primary"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-anchor=".mission-vision"
+          >
             Our Mission & Vision
           </h2>
-          <p className="text-lg text-muted-foreground">
+
+          <p
+            className="text-lg text-muted-foreground"
+            data-aos="fade-up"
+            data-aos-delay="120"
+            data-aos-duration="700"
+            data-aos-anchor=".mission-vision"
+          >
             <span className="font-semibold text-foreground">Mission:</span>{" "}
             Delivering value-added services to our clients through innovative
             and customized solutions focused on the Energy, Construction, Power,
             Oil & Gas industries.
           </p>
-          <p className="text-lg text-muted-foreground">
+
+          <p
+            className="text-lg text-muted-foreground"
+            data-aos="fade-up"
+            data-aos-delay="240"
+            data-aos-duration="700"
+            data-aos-anchor=".mission-vision"
+          >
             <span className="font-semibold text-foreground">Vision:</span>{" "}
             Becoming the Best-in-class Service provider in the Nigerian Oil &
             Gas sector renowned for excellence in Equipment Supplies,
@@ -126,28 +150,60 @@ export default function AboutUsPage() {
             Resources.
           </p>
         </div>
-        <div className="relative h-64 md:h-96 w-full rounded-lg overflow-hidden shadow-xl">
+
+        <div
+          className="relative h-64 md:h-96 w-full rounded-lg overflow-hidden shadow-xl"
+          data-aos="zoom-in"
+          data-aos-delay="180"
+          data-aos-duration="800"
+          data-aos-easing="ease-out-cubic"
+          data-aos-anchor=".mission-vision"
+        >
           <Image
             alt="Our Mission and Vision"
             className="object-cover"
             fill
             src="/images/procument.jpg"
+            onLoadingComplete={() => {
+              // Keep AOS positions correct after image settles
+              // @ts-ignore
+              import("aos").then(({ default: AOS }) => AOS.refresh());
+            }}
           />
         </div>
       </section>
 
-      <section className="mb-16 md:mb-24">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+      <section
+        className="core-values-section mb-16 md:mb-24"
+        data-aos-anchor-placement="top-bottom"
+      >
+        <h2
+          className="text-3xl md:text-4xl font-bold text-center mb-12"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
           Our Core Values
         </h2>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {coreValues.map((value, index) => (
             <Card
               key={index}
               className="text-center p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              data-aos="fade-up"
+              data-aos-delay={index * 100} // 0, 100, 200...
+              data-aos-duration="650"
+              data-aos-easing="ease-out-cubic"
+              data-aos-anchor=".core-values-section"
             >
               <CardHeader className="pb-4">
-                <div className="p-3 rounded-full bg-primary/10 text-primary mx-auto mb-4">
+                <div
+                  className="p-3 rounded-full bg-primary/10 text-primary mx-auto mb-4"
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 100 + 120} // icon pops just after the card
+                  data-aos-duration="500"
+                  data-aos-anchor=".core-values-section"
+                >
                   <value.icon className="h-8 w-8" />
                 </div>
                 <CardTitle className="text-xl font-semibold">
@@ -156,37 +212,6 @@ export default function AboutUsPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">{value.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      <section className="bg-muted p-8 rounded-lg shadow-inner">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          Meet Our Leadership Team
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {leadershipTeam.map((member, index) => (
-            <Card
-              key={index}
-              className="text-center p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-            >
-              <CardContent className="flex flex-col items-center p-0">
-                <Image
-                  alt={member.name}
-                  className="rounded-full object-cover mb-4 border-2 border-primary/20"
-                  height={120}
-                  src={member.image || "/placeholder.svg"}
-                  width={120}
-                />
-                <h3 className="text-xl font-semibold text-foreground">
-                  {member.name}
-                </h3>
-                <p className="text-primary text-sm mb-3">{member.title}</p>
-                <p className="text-muted-foreground text-sm">
-                  {member.description}
-                </p>
               </CardContent>
             </Card>
           ))}

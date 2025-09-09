@@ -12,7 +12,7 @@ import {
   HammerIcon,
 } from "lucide-react";
 import {} from "@/components/ui/card";
-import Image from "next/image";
+// import Image from "next/image";
 import { ServiceCard } from "@/components/service-card";
 import { ProjectCard } from "@/components/project-card";
 
@@ -42,30 +42,34 @@ export default function HomePage() {
     {
       quote:
         "Experia Energy delivered our project ahead of schedule and within budget. Their professionalism and expertise are unmatched.",
-      name: "John Doe",
-      title: "CEO, Global Power Corp",
-      avatarSrc: "/placeholder.svg?height=64&width=64",
+      name: "Uche Soronnadi",
+      company: "SPDC",
+      // title: "CEO, Global Power Corp",
+      avatarSrc: "",
     },
     {
       quote:
-        "The team at Experia Energy is truly exceptional. Their commitment to safety and quality is evident in every aspect of their work.",
-      name: "Jane Smith",
-      title: "Project Manager, Renewable Solutions",
-      avatarSrc: "/placeholder.svg?height=64&width=64",
+        "The team at Experia Energy is truly exceptional. Their commitment to safety and quality is evident in every aspect of their work",
+      name: "Agbara Prince",
+      company: "DAEWOO & C",
+      // title: "Project Manager, Renewable Solutions",
+      avatarSrc: "",
     },
     {
       quote:
         "We've partnered with Experia Energy on multiple complex projects, and they consistently provide innovative and reliable solutions.",
-      name: "Robert Johnson",
-      title: "Operations Director, Energy Innovations",
-      avatarSrc: "/placeholder.svg?height=64&width=64",
+      name: "Kessignton .U.",
+      company: "Tomba Resources",
+      // title: "Operations Director, Energy Innovations",
+      avatarSrc: "",
     },
   ];
 
   const services = [
     {
       icon: PackageIcon,
-      title: "Sectional Replacements & Leak Repairs",
+      title:
+        "Engineering Design, Procurement, Fabrication and Installation of Pig Launcher / Receiver",
       description:
         "We provide Sectional Replacement of Flowlines and Pipelines either on land or swamp areas.We also carry out leak repair on Pipelines and Flowlines, using different methods.",
       imageSrc: "/images/service1.jpg",
@@ -75,7 +79,7 @@ export default function HomePage() {
       title: "Wellhead Installation & Maintenance",
       description:
         "We have been engaged in Wellhead installation and maintenance projects for a long time, with trained professionals. Our expertise covers wellheads from various manufacturers in different types of locations.",
-      imageSrc: "/images/eng.jpg",
+      imageSrc: "/images/services/wellhead.jpg",
     },
     {
       icon: HammerIcon,
@@ -88,28 +92,34 @@ export default function HomePage() {
 
   const projects = [
     {
-      imageSrc: "/images/project1.jpg",
-      title: "Large-Scale Solar Farm Development",
-      description:
-        "Design, procurement, and construction of a 50MW solar power plant.",
-      outcome:
-        "Successfully delivered clean energy to over 20,000 homes, reducing carbon emissions by 50,000 tons annually.",
+      imageSrc: "/images/project/project1.jpg",
+      title:
+        "Engineering Design, Procurement, Fabrication and Installation of Pig Launcher / Receiver",
+      scope:
+        "FABRICATION, CONSTRUCTION & INSTALLATION OF A 10 X 6.0KM SCH. 80 PIPELINE FROM EKULAMA 1 EXISTING NEW MANIFOLD TO EKULAMA 1&2 LACT UNIT AT SAN BARTH",
+      client: "NEWCROSS E&P",
+      location: ": Ekulama 1&2, Rivers State.",
+      date: "August, 2020",
+      status: "Completed",
     },
     {
-      imageSrc: "/images/project2.jpg",
-      title: "Offshore Platform Maintenance & Upgrade",
-      description:
-        "Comprehensive maintenance and technological upgrades for an offshore oil and gas platform.",
-      outcome:
-        "Enhanced operational efficiency by 30% and extended platform lifespan by 15 years, ensuring continuous production.",
+      imageSrc: "/images/project/project2.jpg",
+      title: "Blasting and Painting ",
+      scope: "Tebidaba Platform Refurbishment",
+      client: " Nigeria Agip Oil Company [NAOC]",
+      location: "Tebidaba FlowStation, Bayelsa State",
+      date: "April 2019",
+      status: "Completed",
     },
     {
-      imageSrc: "/images/project3.jpg",
-      title: "Cross-Country Pipeline Construction",
-      description:
-        "Construction of a 300km natural gas pipeline, including civil works and environmental mitigation.",
-      outcome:
-        "Completed ahead of schedule, providing a vital energy transport link and adhering to strict environmental regulations.",
+      imageSrc: "/images/project/project3.jpg",
+      title: "Flowlines / Pipelines Construction",
+      scope:
+        "FABRICATION, CONSTRUCTION & INSTALLATION OF A 10 X 6.0KM SCH. 80 PIPELINE FROM EKULAMA 1 EXISTING NEW MANIFOLD TO EKULAMA 1&2 LACT UNIT AT SAN BARTH",
+      client: "NEWCROSS E&P",
+      location: ": Ekulama 1&2, Rivers State.",
+      date: "May, 2019",
+      status: "Completed",
     },
   ];
 
@@ -128,6 +138,8 @@ export default function HomePage() {
               icon={prop.icon}
               title={prop.title}
               description={prop.description}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
             />
           ))}
         </div>
@@ -144,7 +156,9 @@ export default function HomePage() {
               icon={service.icon}
               title={service.title}
               description={service.description}
-              imageSrc={service.imageSrc} // Pass the imageSrc to the ServiceCard
+              imageSrc={service.imageSrc}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
             />
           ))}
         </div>
@@ -170,8 +184,10 @@ export default function HomePage() {
                 key={index}
                 quote={testimonial.quote}
                 name={testimonial.name}
-                title={testimonial.title}
+                company={testimonial.company}
                 avatarSrc={testimonial.avatarSrc}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
               />
             ))}
           </div>
@@ -302,8 +318,13 @@ export default function HomePage() {
                 key={index}
                 imageSrc={project.imageSrc}
                 title={project.title}
-                description={project.description}
-                outcome={project.outcome}
+                scope={project.scope}
+                client={project.client}
+                location={project.location}
+                date={project.date}
+                status={project.status}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
               />
             ))}
           </div>

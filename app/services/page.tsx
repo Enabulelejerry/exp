@@ -25,7 +25,7 @@ export default function ServicesPage() {
       title: "Wellhead Installation & Maintenance",
       description:
         "We have been engaged in Wellhead installation and maintenance projects for a long time, with trained professionals. Our expertise covers wellheads from various manufacturers in different types of locations.",
-      imageSrc: "/images/eng.jpg",
+      imageSrc: "/images/services/wellhead.jpg",
     },
     {
       icon: HammerIcon,
@@ -46,35 +46,35 @@ export default function ServicesPage() {
       title: "Corrosion Control",
       description:
         "Experia Energy has a team of NACE-certified corrosion control experts/inspectors to deliver prompt solutions for extending the lifespan of structural elements. We also provide cathodic protection services.",
-      imageSrc: "/images/eng.jpg",
+      imageSrc: "/images/services/corrosion.jpg",
     },
     {
       icon: WrenchIcon,
-      title: "Equipment Leasing",
+      title: "Pipeline Pigging",
       description:
         "Experia Energy provides services in the leasing of pre-mobbed industrial heavy equipment, such as Cranes, Forklift, Swamp Buggy, Air Compressor, Pumps, Welding machine, Air dryer, Air Tank, Blasting & Painting spread, Floodlights, etc.",
-      imageSrc: "/images/project2.jpg",
+      imageSrc: "/images/services/pipeline-pigging.jpg",
     },
     {
       icon: UsersIcon,
       title: "Manpower Supply & Equipment Leasing",
       description:
         "Providing skilled personnel and state-of-the-art equipment for project flexibility and efficiency.",
-      imageSrc: "/images/service3.jpg",
+      imageSrc: "/images/services/manpower-supply.jpg",
     },
     {
       icon: DropletIcon,
       title: "Procurement",
       description:
         "Our seasoned expertise and strategy in foreign and local procurement optimize our client’s processes, so as to remain productive, efficient and profitable.",
-      imageSrc: "/images/procument.jpg",
+      imageSrc: "/images/services/procument.png",
     },
     {
       icon: PipeIcon,
       title: "Civil & Structural Works",
       description:
         "Our construction expertise is driven by the principles of integrity, strict compliance to Civil Engineering Standars and a passion for Excellence.",
-      imageSrc: "/images/service4.jpg",
+      imageSrc: "/images/services/civil.jpg",
     },
   ];
 
@@ -99,7 +99,10 @@ export default function ServicesPage() {
               icon={service.icon}
               title={service.title}
               description={service.description}
-              imageSrc={service.imageSrc} // Pass the imageSrc to the ServiceCard
+              imageSrc={service.imageSrc}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+              // Pass the imageSrc to the ServiceCard
             />
           ))}
         </div>

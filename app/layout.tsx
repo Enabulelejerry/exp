@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import AOSInit from "./AOSInit";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <AOSInit />
         <div className="flex min-h-screen flex-col">
           <SiteHeader />
           <main className="flex-1 pb-16 md:pb-24">{children}</main>

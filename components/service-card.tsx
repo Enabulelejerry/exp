@@ -20,7 +20,11 @@ export function ServiceCard({
   imageSrc,
 }: ServiceCardProps) {
   return (
-    <Card className="flex flex-col p-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+    <Card
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      className="flex flex-col p-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+    >
       <div className="relative w-full h-48">
         <Image
           alt={title}

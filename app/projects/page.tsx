@@ -3,52 +3,86 @@ import { ProjectCard } from "@/components/project-card";
 export default function ProjectsPage() {
   const projects = [
     {
-      imageSrc: "/images/project1.jpg",
-      title: "Large-Scale Solar Farm Development",
-      description:
-        "Design, procurement, and construction of a 50MW solar power plant.",
-      outcome:
-        "Successfully delivered clean energy to over 20,000 homes, reducing carbon emissions by 50,000 tons annually.",
+      imageSrc: "/images/project/project1.jpg",
+      title:
+        "Engineering Design, Procurement, Fabrication and Installation of Pig Launcher / Receiver",
+      scope:
+        "FABRICATION, CONSTRUCTION & INSTALLATION OF A 10 X 6.0KM SCH. 80 PIPELINE FROM EKULAMA 1 EXISTING NEW MANIFOLD TO EKULAMA 1&2 LACT UNIT AT SAN BARTH",
+      client: "NEWCROSS E&P",
+      location: ": Ekulama 1&2, Rivers State.",
+      date: "August, 2020",
+      status: "Completed",
     },
     {
-      imageSrc: "/images/project2.jpg",
-      title: "Offshore Platform Maintenance & Upgrade",
-      description:
-        "Comprehensive maintenance and technological upgrades for an offshore oil and gas platform.",
-      outcome:
-        "Enhanced operational efficiency by 30% and extended platform lifespan by 15 years, ensuring continuous production.",
+      imageSrc: "/images/project/project2.jpg",
+      title: "Blasting and Painting ",
+      scope: "Tebidaba Platform Refurbishment",
+      client: " Nigeria Agip Oil Company [NAOC]",
+      location: "Tebidaba FlowStation, Bayelsa State",
+      date: "April 2019",
+      status: "Completed",
     },
     {
-      imageSrc: "/images/project3.jpg",
-      title: "Cross-Country Pipeline Construction",
-      description:
-        "Construction of a 300km natural gas pipeline, including civil works and environmental mitigation.",
-      outcome:
-        "Completed ahead of schedule, providing a vital energy transport link and adhering to strict environmental regulations.",
+      imageSrc: "/images/project/project3.jpg",
+      title: "Flowlines / Pipelines Construction",
+      scope:
+        "FABRICATION, CONSTRUCTION & INSTALLATION OF A 10 X 6.0KM SCH. 80 PIPELINE FROM EKULAMA 1 EXISTING NEW MANIFOLD TO EKULAMA 1&2 LACT UNIT AT SAN BARTH",
+      client: "NEWCROSS E&P",
+      location: "Ekulama 1&2, Rivers State.",
+      date: "May, 2019",
+      status: "Completed",
+    },
+
+    {
+      imageSrc: "/images/project/project4.jpg",
+      title: "",
+      scope:
+        "(4) Project Scope:FABRICATION, CONSTRUCTION & INSTALLATION OF A 10 X 6.0KM SCH. 80 PIPELINE FROM EKULAMA 1 EXISTING NEW MANIFOLD TO EKULAMA 1&2 LACT UNIT AT SAN BARTH",
+      client: "NEWCROSS E&P",
+      location: "Ekulama 1&2, Rivers State.",
+      date: "August, 2019",
+      status: "Completed",
+    },
+
+    {
+      imageSrc: "/images/project/project5.jpg",
+      title: "",
+      scope:
+        "FLOWLINE RESTORATION FOR CAWC Wells 23 L/S, 15L/S, 21L and Alakiri W4T",
+      client: "NEOL",
+      location: "CAWC I & II, Alakiri",
+      date: "April, 2024",
+      status: "Completed",
     },
     {
-      imageSrc: "/images/banner1.jpg",
-      title: "Wind Turbine Installation & Commissioning",
-      description:
-        "Installation and commissioning of 15 large-scale wind turbines in a challenging terrain.",
-      outcome:
-        "Successfully integrated into the national grid, contributing 45MW of renewable energy capacity.",
+      imageSrc: "/images/project/project6.jpg",
+      title: "",
+      scope: "FABRICATION, FURNISHING AND INSTALLATION OF PORTACABINS",
+      client: "NEOL",
+      location: "CAWC I & II",
+      date: "2025",
+      status: "Completed",
     },
+
     {
-      imageSrc: "/images/eng.jpg",
-      title: "Substation Modernization Project",
-      description:
-        "Upgrade and automation of a critical power substation to improve grid stability and reliability.",
-      outcome:
-        "Reduced power outages by 40% and improved energy distribution efficiency across the region.",
+      imageSrc: "/images/project/project7.jpg",
+      title: "",
+      scope:
+        "CONTRACT FOR MAINTENANCE OF GAS PLANT AND FS MINOR PUMPS IN LAND EAST FACILITIES SSAGS & FYIP",
+      client: "SPDC",
+      location: "LAND EAST FACILITIES",
+      date: "JUNE 2021",
+      status: "Completed",
     },
+
     {
-      imageSrc: "/images/procument.jpg",
-      title: "Hydroelectric Dam Structural Inspection",
-      description:
-        "Detailed structural inspection and integrity assessment of a major hydroelectric dam.",
-      outcome:
-        "Provided critical data for future maintenance planning, ensuring the long-term safety and operation of the dam.",
+      imageSrc: "/images/project/project8.jpg",
+      title: "",
+      scope: "FABRICATION AND INSTALLATION OF HOT OIL VENT COLLECTION VESSEL",
+      client: "GREENVILLE",
+      location: "RUMUJI",
+      date: "SEPTEMBER, 2021",
+      status: "Completed",
     },
   ];
 
@@ -70,8 +104,13 @@ export default function ProjectsPage() {
               key={index}
               imageSrc={project.imageSrc}
               title={project.title}
-              description={project.description}
-              outcome={project.outcome}
+              scope={project.scope}
+              client={project.client}
+              location={project.location}
+              date={project.date}
+              status={project.status}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
             />
           ))}
         </div>
