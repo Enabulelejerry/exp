@@ -225,27 +225,37 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
+      <section className="py-12 sm:py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-10">
+          <h2
+            className="text-center font-bold tracking-tight text-balance
+                 text-[clamp(1.25rem,4vw,2rem)] sm:text-3xl
+                 mb-6 sm:mb-10"
+          >
             Certification & Affiliation
           </h2>
-          <ul className="space-y-4 text-lg text-gray-700">
-            <li className="flex items-start">
-              <span className="mr-2 text-green-600 font-bold">•</span>
+
+          <ul
+            role="list"
+            className="mx-auto max-w-[42rem] md:max-w-4xl
+                 list-disc marker:text-green-600 pl-5
+                 text-gray-700 text-sm sm:text-base md:text-lg
+                 leading-relaxed text-pretty break-words
+                 space-y-3 sm:space-y-4
+                 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-3"
+          >
+            <li>
               Authorization Letter –{" "}
               <strong>
                 Shinestar Steel Industries Corp. (Hunan Prime Steel Pipe Co.,
                 Ltd)
               </strong>
             </li>
-            <li className="flex items-start">
-              <span className="mr-2 text-green-600 font-bold">•</span>
+            <li>
               Authorization Letter –{" "}
               <strong>Delta Pacific Valve Manufacturing Co.</strong>
             </li>
-            <li className="flex items-start">
-              <span className="mr-2 text-green-600 font-bold">•</span>
+            <li>
               <strong>ISO Certificate</strong>
             </li>
           </ul>
@@ -401,10 +411,21 @@ export default function HomePage() {
       </div> */}
 
       <section className="mt-16 md:mt-24">
-        <h2 className="text-center text-2xl md:text-3xl font-bold mb-6">
+        <h2
+          className="text-center text-balance tracking-tight font-bold
+               text-xl sm:text-2xl md:text-3xl lg:text-4xl
+               mb-3 sm:mb-4"
+        >
           Trusted by our partners
         </h2>
-        <p className="text-center text-muted-foreground mb-8">
+
+        <p
+          className="text-center text-pretty text-muted-foreground
+              mx-auto px-4
+              max-w-[28rem] sm:max-w-2xl
+              text-sm sm:text-base md:text-lg
+              leading-relaxed mb-6 sm:mb-8"
+        >
           We collaborate with industry leaders to deliver reliable energy
           solutions.
         </p>
