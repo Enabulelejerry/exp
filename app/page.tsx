@@ -15,6 +15,7 @@ import {} from "@/components/ui/card";
 // import Image from "next/image";
 import { ServiceCard } from "@/components/service-card";
 import { ProjectCard } from "@/components/project-card";
+import PartnersSlider from "@/components/PartnersSlider";
 
 export default function HomePage() {
   const valueProps = [
@@ -28,13 +29,13 @@ export default function HomePage() {
       icon: ShieldCheckIcon,
       title: "VISION STATEMENT",
       description:
-        "Becoming the Best-in-class Service provider in the Nigerian Oil & Gas sector renowned for excellence in Equipment Supplies, Engineering, Procurement and Construction Projects as well as Marine Services using Best Available Technology and Best Available Resources.",
+        "To be the leading service provider in Nigeria’s Oil & Gas sector, recognized for excellence in equipment supply, engineering, procurement, construction projects, and marine services — delivering value through the best available technology and resources.",
     },
     {
       icon: UsersIcon,
       title: "OUR STANDARD",
       description:
-        "We meet all international best practice quality standard by developing a system of monitoring all our projects to ensure compliance with each client's standard requirements and value for their money.",
+        "We adhere to international best-practice quality standards by implementing a robust monitoring system across all projects, ensuring full compliance with client requirements while delivering optimal value for their investment.",
     },
   ];
 
@@ -68,8 +69,7 @@ export default function HomePage() {
   const services = [
     {
       icon: PackageIcon,
-      title:
-        "Engineering Design, Procurement, Fabrication and Installation of Pig Launcher / Receiver",
+      title: "Sectional Replacements & Leak Repairs",
       description:
         "We provide Sectional Replacement of Flowlines and Pipelines either on land or swamp areas.We also carry out leak repair on Pipelines and Flowlines, using different methods.",
       imageSrc: "/images/service1.jpg",
@@ -92,35 +92,66 @@ export default function HomePage() {
 
   const projects = [
     {
-      imageSrc: "/images/project/project1.jpg",
+      imageSrc: "/images/project/project1/image1.jpg",
       title:
         "Engineering Design, Procurement, Fabrication and Installation of Pig Launcher / Receiver",
-      scope:
-        "FABRICATION, CONSTRUCTION & INSTALLATION OF A 10 X 6.0KM SCH. 80 PIPELINE FROM EKULAMA 1 EXISTING NEW MANIFOLD TO EKULAMA 1&2 LACT UNIT AT SAN BARTH",
-      client: "NEWCROSS E&P",
-      location: ": Ekulama 1&2, Rivers State.",
-      date: "August, 2020",
+      scope: "FABRICATION, FURNISHING AND INSTALLATION OF PORTACABINS",
+      client: "NEOL",
+      location: "CAWC I & II",
+      date: "2025",
       status: "Completed",
+
+      images: [
+        "/images/project/project1/image1.jpg",
+        "/images/project/project1/image2.jpg",
+        "/images/project/project1/image3.jpg",
+        "/images/project/project1/image4.jpg",
+        "/images/project/project1/image5.jpg",
+      ],
+      link: "/projects/project1",
     },
     {
-      imageSrc: "/images/project/project2.jpg",
+      imageSrc: "/images/project/project2/image1.jpg",
       title: "Blasting and Painting ",
-      scope: "Tebidaba Platform Refurbishment",
-      client: " Nigeria Agip Oil Company [NAOC]",
-      location: "Tebidaba FlowStation, Bayelsa State",
-      date: "April 2019",
+      scope:
+        "FLOWLINE RESTORATION FOR CAWC Wells 23 L/S, 15L/S, 21L and Alakiri W4T",
+      client: "NEOL",
+      location: "CAWC I & II, Alakiri",
+      date: "2024",
       status: "Completed",
+      images: [
+        "/images/project/project2/image1.jpg",
+        "/images/project/project2/image2.jpg",
+        "/images/project/project2/image3.jpg",
+        "/images/project/project2/image4.jpg",
+        "/images/project/project2/image5.jpg",
+        "/images/project/project2/image6.jpg",
+      ],
+      link: "/projects/project2",
     },
     {
-      imageSrc: "/images/project/project3.jpg",
+      imageSrc: "/images/project/project3/image1.jpg",
       title: "Flowlines / Pipelines Construction",
       scope:
-        "FABRICATION, CONSTRUCTION & INSTALLATION OF A 10 X 6.0KM SCH. 80 PIPELINE FROM EKULAMA 1 EXISTING NEW MANIFOLD TO EKULAMA 1&2 LACT UNIT AT SAN BARTH",
-      client: "NEWCROSS E&P",
-      location: ": Ekulama 1&2, Rivers State.",
-      date: "May, 2019",
+        " CONTRACT FOR MAINTENANCE OF GAS PLANT AND FS MINOR PUMPS IN LAND EAST FACILITIES SSAGS & FYIP",
+      client: "SPDC",
+      location: "LAND EAST FACILITIES",
+      date: "JUNE, 2021",
       status: "Completed",
+      images: ["/images/project/project3/image1.jpg"],
+      link: "/projects/project3",
     },
+  ];
+
+  const partnerLogos = [
+    { src: "/images/partners/AP.jpg", alt: "AP" },
+    { src: "/images/partners/ENI.png", alt: "ENI" },
+    { src: "/images/partners/ER.jpg", alt: "ER" },
+    { src: "/images/partners/HE.png", alt: "HE" },
+    { src: "/images/partners/NE.png", alt: "NE" },
+    { src: "/images/partners/NLG.png", alt: "NLG" },
+    { src: "/images/partners/NNP.png", alt: "NNP" },
+    { src: "/images/partners/SA.png", alt: "SA" },
   ];
 
   return (
@@ -191,6 +222,33 @@ export default function HomePage() {
               />
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-10">
+            Certification & Affiliation
+          </h2>
+          <ul className="space-y-4 text-lg text-gray-700">
+            <li className="flex items-start">
+              <span className="mr-2 text-green-600 font-bold">•</span>
+              Authorization Letter –{" "}
+              <strong>
+                Shinestar Steel Industries Corp. (Hunan Prime Steel Pipe Co.,
+                Ltd)
+              </strong>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2 text-green-600 font-bold">•</span>
+              Authorization Letter –{" "}
+              <strong>Delta Pacific Valve Manufacturing Co.</strong>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2 text-green-600 font-bold">•</span>
+              <strong>ISO Certificate</strong>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -301,7 +359,7 @@ export default function HomePage() {
         </div>
       </section> */}
 
-      <div className="container py-16 md:py-24">
+      {/* <div className="container py-16 md:py-24">
         <section className="text-center mb-16 md:mb-24">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Projects</h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -323,6 +381,7 @@ export default function HomePage() {
                 location={project.location}
                 date={project.date}
                 status={project.status}
+                images={project.images}
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               />
@@ -339,7 +398,19 @@ export default function HomePage() {
             </Button>
           </div>
         </section>
-      </div>
+      </div> */}
+
+      <section className="mt-16 md:mt-24">
+        <h2 className="text-center text-2xl md:text-3xl font-bold mb-6">
+          Trusted by our partners
+        </h2>
+        <p className="text-center text-muted-foreground mb-8">
+          We collaborate with industry leaders to deliver reliable energy
+          solutions.
+        </p>
+
+        <PartnersSlider items={partnerLogos} speedSeconds={35} />
+      </section>
 
       <section className="bg-primary text-primary-foreground py-16 md:py-24 text-center">
         <div className="container max-w-3xl space-y-6">

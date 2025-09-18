@@ -5,6 +5,7 @@ import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import AOSInit from "./AOSInit";
+import { IsoHeader } from "@/components/iso-header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <AOSInit />
         <div className="flex min-h-screen flex-col">
+          <IsoHeader />
           <SiteHeader />
           <main className="flex-1 pb-16 md:pb-24">{children}</main>
           <SiteFooter />

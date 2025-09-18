@@ -3,28 +3,25 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { SheetTrigger, SheetContent, Sheet } from "@/components/ui/sheet";
-import { MenuIcon, ZapIcon } from "lucide-react";
+import { MenuIcon } from "lucide-react";
 import Image from "next/image";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/90 backdrop-blur-sm shadow-sm">
+    <header className="sticky top-10 z-40 w-full border-b bg-background/90 backdrop-blur-sm shadow-sm">
+      {/* top-10 offsets under the ISO bar (40px) */}
       <div className="container flex h-16 items-center justify-between">
-        <Link className="flex items-center gap-2" href="/">
+        <Link className="flex items-center gap-2" href="/" aria-label="Home">
           <Image
             src="/logo.jpg"
-            alt="Your Company Name Logo"
-            width={200}
-            height={200}
+            alt="Experia Energy"
+            width={140}
+            height={32}
             priority
-            style={{ width: "150px", height: "150px", objectFit: "contain" }}
+            className="h-8 w-auto object-contain" // fits 64px bar nicely
           />
-
-          {/* <ZapIcon className="h-6 w-6 text-primary" />
-          <span className="text-lg font-bold text-foreground">
-            Experia Energy
-          </span> */}
         </Link>
+
         <nav className="hidden md:flex items-center gap-6">
           <Link
             className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
@@ -57,6 +54,7 @@ export function SiteHeader() {
             Contact Us
           </Link>
         </nav>
+
         <Sheet>
           <SheetTrigger asChild>
             <Button

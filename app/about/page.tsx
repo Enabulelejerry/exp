@@ -95,7 +95,7 @@ export default function AboutUsPage() {
           Nigeria. EXPERIA ENERGY SERVICES LTD has rich local content policies,
           which ensure we conform to very high professional and ethical
           standards. We have developed and maintain a Quality Management System
-          that conforms to the requirements of ISO 9001:2008. As a result, we
+          that conforms to the requirements of ISO 9001:2015. As a result, we
           have recorded NO Safety Incidences, have a robust relationship with
           our clients and host communities, while undertaking seemingly
           insurmountable projects in very difficult terrains.
@@ -149,6 +149,21 @@ export default function AboutUsPage() {
             Services using Best Available Technology and Best Available
             Resources.
           </p>
+
+          <div
+            data-aos="fade-up"
+            data-aos-delay="360"
+            data-aos-duration="700"
+            data-aos-anchor=".mission-vision"
+          >
+            <a
+              href="/files/company-profile.pdf"
+              download="Company_Profile.pdf"
+              className="inline-block px-6 py-3 rounded-lg bg-primary text-white font-semibold shadow-md hover:bg-primary/90 transition"
+            >
+              Download Company Profile
+            </a>
+          </div>
         </div>
 
         <div
