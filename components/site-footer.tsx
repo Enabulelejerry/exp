@@ -164,7 +164,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <a href="tel:+234805924591" className="hover:text-primary">
-                  +234 805 924 591
+                  +234 805 924 5917
                 </a>
               </li>
             </ul>

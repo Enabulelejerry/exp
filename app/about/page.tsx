@@ -130,9 +130,9 @@ export default function AboutUsPage() {
             data-aos-anchor=".mission-vision"
           >
             <span className="font-semibold text-foreground">Mission:</span>{" "}
-            Delivering value-added services to our clients through innovative
-            and customized solutions focused on the Energy, Construction, Power,
-            Oil & Gas industries.
+            Delivering tailored, innovative solutions that create measurable
+            value for clients in the Energy, Construction, Power, and Oil
+            & Gas industries
           </p>
 
           <p
@@ -142,12 +142,11 @@ export default function AboutUsPage() {
             data-aos-duration="700"
             data-aos-anchor=".mission-vision"
           >
-            <span className="font-semibold text-foreground">Vision:</span>{" "}
-            Becoming the Best-in-class Service provider in the Nigerian Oil &
-            Gas sector renowned for excellence in Equipment Supplies,
-            Engineering, Procurement and Construction Projects as well as Marine
-            Services using Best Available Technology and Best Available
-            Resources.
+            <span className="font-semibold text-foreground">Vision:</span> To be
+            the leading service provider in Nigeria's Oil & Gas sector,
+            recognized for excellence in equipment supply, engineering,
+            procurement, construction projects, and marine services — delivering
+            value through the best available technology and resources.
           </p>
 
           <div

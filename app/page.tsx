@@ -23,7 +23,7 @@ export default function HomePage() {
       icon: LightbulbIcon,
       title: "MISSION STATEMENT",
       description:
-        "Delivering value-added services to our clients through innovative and customized solutions focused on the Energy, Construction, Power, Oil & Gas industries.",
+        "Delivering tailored, innovative solutions that create measurable value for clients in the Energy, Construction, Power, and Oil & Gas industries",
     },
     {
       icon: ShieldCheckIcon,
@@ -152,6 +152,18 @@ export default function HomePage() {
     { src: "/images/partners/NLG.png", alt: "NLG" },
     { src: "/images/partners/NNP.png", alt: "NNP" },
     { src: "/images/partners/SA.png", alt: "SA" },
+    { src: "/images/partners/ARADELlogo.png", alt: "SA" },
+    { src: "/images/partners/chevron.png", alt: "SA" },
+    { src: "/images/partners/DEAWOOlogo.png", alt: "SA" },
+    { src: "/images/partners/exxonmobile.png", alt: "SA" },
+    { src: "/images/partners/Greenville-default-logo.png", alt: "SA" },
+    { src: "/images/partners/ingetia logo.jpeg.jpg", alt: "SA" },
+    { src: "/images/partners/insights-aveon LOGO.jpg", alt: "SA" },
+    { src: "/images/partners/NDDC.png", alt: "SA" },
+    { src: "/images/partners/Oando_logo.svg.png", alt: "SA" },
+    { src: "/images/partners/Seplat-energy.png", alt: "SA" },
+    { src: "/images/partners/Shell-Logo.png", alt: "SA" },
+    { src: "/images/partners/TotalEnergies_logo.svg.png", alt: "SA" },
   ];
 
   return (
@@ -232,10 +244,28 @@ export default function HomePage() {
                  text-[clamp(1.25rem,4vw,2rem)] sm:text-3xl
                  mb-6 sm:mb-10"
           >
-            Certification & Affiliation
+            Affiliations
           </h2>
 
-          <ul
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 items-center justify-center">
+            <img
+              src="/images/certification/shinestar.png"
+              alt="Certification 1"
+              className="rounded-lg shadow-md mx-auto h-28 w-auto max-w-[160px] object-contain"
+            />
+            <img
+              src="/images/certification/widen.jpg"
+              alt="Certification 2"
+              className="rounded-lg shadow-md mx-auto h-28 w-auto max-w-[160px] object-contain"
+            />
+            <img
+              src="/images/certification/Deltapacificvalve.png"
+              alt="Certification 3"
+              className="rounded-lg shadow-md mx-auto h-28 w-auto max-w-[160px] object-contain"
+            />
+          </div>
+
+          {/* <ul
             role="list"
             className="mx-auto max-w-[42rem] md:max-w-4xl
                  list-disc marker:text-green-600 pl-5
@@ -258,7 +288,7 @@ export default function HomePage() {
             <li>
               <strong>ISO Certificate</strong>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </section>
 
