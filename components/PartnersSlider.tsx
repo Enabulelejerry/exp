@@ -54,13 +54,17 @@ export default function PartnersSlider({
           const h = logo.height ?? 64;
 
           const img = (
-            <Image
-              src={logo.src || "/placeholder.svg?height=64&width=160"}
+            <img
+              src={logo.src}
               alt={logo.alt}
               width={w}
               height={h}
+              loading="lazy"
+              decoding="async"
               className="opacity-80 hover:opacity-100 transition-opacity object-contain"
-              sizes="(max-width: 768px) 120px, 160px"
+              onError={(e) =>
+                ((e.currentTarget as HTMLImageElement).style.display = "none")
+              }
               draggable={false}
             />
           );

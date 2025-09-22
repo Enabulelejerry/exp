@@ -144,26 +144,71 @@ export default function HomePage() {
   ];
 
   const partnerLogos = [
-    { src: "/images/partners/AP.jpg", alt: "AP" },
-    { src: "/images/partners/ENI.png", alt: "ENI" },
-    { src: "/images/partners/ER.jpg", alt: "ER" },
-    { src: "/images/partners/HE.png", alt: "HE" },
-    { src: "/images/partners/NE.png", alt: "NE" },
-    { src: "/images/partners/NLG.png", alt: "NLG" },
-    { src: "/images/partners/NNP.png", alt: "NNP" },
-    { src: "/images/partners/SA.png", alt: "SA" },
-    { src: "/images/partners/ARADELlogo.png", alt: "SA" },
-    { src: "/images/partners/chevron.png", alt: "SA" },
-    { src: "/images/partners/DEAWOOlogo.png", alt: "SA" },
-    { src: "/images/partners/exxonmobile.png", alt: "SA" },
-    { src: "/images/partners/Greenville-default-logo.png", alt: "SA" },
-    { src: "/images/partners/ingetia logo.jpeg.jpg", alt: "SA" },
-    { src: "/images/partners/insights-aveon LOGO.jpg", alt: "SA" },
-    { src: "/images/partners/NDDC.png", alt: "SA" },
-    { src: "/images/partners/Oando_logo.svg.png", alt: "SA" },
-    { src: "/images/partners/Seplat-energy.png", alt: "SA" },
-    { src: "/images/partners/Shell-Logo.png", alt: "SA" },
-    { src: "/images/partners/TotalEnergies_logo.svg.png", alt: "SA" },
+    { src: "/images/partners/AP.jpg", alt: "AP", width: 120, height: 48 },
+    { src: "/images/partners/ENI.png", alt: "ENI", width: 120, height: 48 },
+    { src: "/images/partners/ER.jpg", alt: "ER", width: 120, height: 48 },
+    { src: "/images/partners/HE.png", alt: "HE", width: 120, height: 48 },
+    { src: "/images/partners/NE.png", alt: "NE", width: 120, height: 48 },
+    { src: "/images/partners/NLG.png", alt: "NLG", width: 120, height: 48 },
+    { src: "/images/partners/NNP.png", alt: "NNP", width: 120, height: 48 },
+    { src: "/images/partners/SA.png", alt: "SA", width: 120, height: 48 },
+    {
+      src: "/images/partners/ARADELlogo.png",
+      alt: "SA",
+      width: 120,
+      height: 48,
+    },
+    { src: "/images/partners/chevron.png", alt: "SA", width: 120, height: 48 },
+    {
+      src: "/images/partners/DEAWOOlogo.png",
+      alt: "SA",
+      width: 120,
+      height: 48,
+    },
+    {
+      src: "/images/partners/exxonmobile.png",
+      alt: "SA",
+      width: 120,
+      height: 48,
+    },
+    {
+      src: "/images/partners/Greenville-default-logo.png",
+      alt: "SA",
+      width: 120,
+      height: 48,
+    },
+    {
+      src: "/images/partners/ingetia logo.jpeg.jpg",
+      alt: "SA",
+      width: 120,
+      height: 48,
+    },
+    {
+      src: "/images/partners/insights-aveon LOGO.jpg",
+      alt: "SA",
+      width: 120,
+      height: 48,
+    },
+
+    { src: "/images/partners/Oando.png", alt: "SA", width: 120, height: 48 },
+    {
+      src: "/images/partners/Seplat-energy.png",
+      alt: "SA",
+      width: 120,
+      height: 48,
+    },
+    {
+      src: "/images/partners/Shell-Logo.png",
+      alt: "SA",
+      width: 120,
+      height: 48,
+    },
+    {
+      src: "/images/partners/TotalEnergies_logo.svg.png",
+      alt: "SA",
+      width: 120,
+      height: 48,
+    },
   ];
 
   return (
@@ -446,7 +491,7 @@ export default function HomePage() {
                text-xl sm:text-2xl md:text-3xl lg:text-4xl
                mb-3 sm:mb-4"
         >
-          Trusted by our partners
+          Trusted by our Clients
         </h2>
 
         <p
@@ -460,7 +505,11 @@ export default function HomePage() {
           solutions.
         </p>
 
-        <PartnersSlider items={partnerLogos} speedSeconds={35} />
+        <PartnersSlider
+          items={partnerLogos}
+          speedSeconds={60}
+          className="py-4"
+        />
       </section>
 
       <section className="bg-primary text-primary-foreground py-16 md:py-24 text-center">
