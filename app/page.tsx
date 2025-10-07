@@ -144,10 +144,20 @@ export default function HomePage() {
   ];
 
   const partnerLogos = [
-    { src: "/images/partners/AP.jpg", alt: "AP", width: 120, height: 48 },
+    { src: "/images/partners/Oando.png", alt: "AP", width: 120, height: 48 },
     { src: "/images/partners/ENI.png", alt: "ENI", width: 120, height: 48 },
-    { src: "/images/partners/ER.jpg", alt: "ER", width: 120, height: 48 },
-    { src: "/images/partners/HE.png", alt: "HE", width: 120, height: 48 },
+    {
+      src: "/images/partners/Shell-Logo.png",
+      alt: "shell",
+      width: 120,
+      height: 48,
+    },
+    {
+      src: "/images/partners/Seplat-energy.png",
+      alt: "Seplat",
+      width: 120,
+      height: 48,
+    },
     { src: "/images/partners/NE.png", alt: "NE", width: 120, height: 48 },
     { src: "/images/partners/NLG.png", alt: "NLG", width: 120, height: 48 },
     { src: "/images/partners/NNP.png", alt: "NNP", width: 120, height: 48 },
@@ -443,47 +453,6 @@ export default function HomePage() {
           </div>
         </div>
       </section> */}
-
-      {/* <div className="container py-16 md:py-24">
-        <section className="text-center mb-16 md:mb-24">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Projects</h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Explore our portfolio of successful projects, showcasing our
-            technical capabilities, commitment to safety, and dedication to
-            delivering impactful energy solutions worldwide.
-          </p>
-        </section>
-
-        <section>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <ProjectCard
-                key={index}
-                imageSrc={project.imageSrc}
-                title={project.title}
-                scope={project.scope}
-                client={project.client}
-                location={project.location}
-                date={project.date}
-                status={project.status}
-                images={project.images}
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              />
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Button
-              asChild
-              size="lg"
-              className="hover:bg-[#f3ca2b]  hover:text-primary transition-colors"
-            >
-              <Link href="/projects">View All Projects</Link>
-            </Button>
-          </div>
-        </section>
-      </div> */}
 
       <section className="mt-16 md:mt-24">
         <h2
